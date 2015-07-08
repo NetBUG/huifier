@@ -1,0 +1,369 @@
+body {
+  color: #333;
+  background-color: #ECFADE;
+  font: normal 11pt verdana, arial, sans-serif;
+  margin: 0; padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: georgia, serif;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+}
+
+h1 span {
+  color: #999;
+}
+
+a img {
+  border: none;
+}
+
+/* overall background and images */
+#mousehole {
+  background: white url(/static/images/doorway-tile.png);
+  width: 638px;
+  margin: 10px auto;
+}
+#page {
+  background: url(/static/images/doorway-jam.png) no-repeat bottom left;
+  padding: 0px 5px 0px 5px;
+}
+#footer {
+  padding: 0px 5px 20px 5px;
+}
+
+/* appearance of doorblocks */
+.block {
+  display: block;
+  margin: 4px 0; padding: 0;
+  background: #eef;
+}
+
+ol.doorblocks .block {
+  background: white;
+}
+
+ol.doorblocks .block .inside,
+ol.doorblocks .block .actions {
+  display: block;
+}
+
+.block .title {
+  margin: 1px;
+  padding: 4px;
+  border: solid 1px #ccc;
+  cursor: move;
+}
+
+.block .actions {
+  float: right;
+  font-size: 10px;
+  display: none;
+}
+
+.block .inside {
+  border-top: solid 2px #eee7ee;
+  font-size: .6em;
+  margin: 1px;
+  padding: 5px 20px;
+  display: none;
+}
+
+.block .inside h1,
+.block .inside h2,
+.block .inside h3, 
+.block .inside h4,
+.block .inside h5,
+.block .inside h6 {
+  font-family: verdana, arial, sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin: 8px 0;
+}
+
+.block p {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.block .title h1 {
+  display: inline;
+  font-size: 19px;
+  color: #353;
+  text-align: left;
+  margin-right: 6px;
+}
+
+.block .title h2 {
+  display: inline;
+  font-size: 13px;
+  color: #797;
+  text-align: left;
+}
+
+li.stub {
+  padding: 10px;
+}
+
+#mouseHole .block .inside a {
+  color: #03c;
+  padding: 2px;
+}
+
+#mouseHole .pool {
+  padding: 8px;
+  height: 22px;
+  background-color: #353;
+  color: white;
+}
+
+#mouseHole .pool .block {
+  margin: 0; padding: 0;
+  margin-top: -5px;
+}
+
+#mouseHole .pool ol li {
+  float: left;
+  margin: 0 4px;
+  padding: 0;
+}
+
+#mouseHole .pool ol li.stub {
+  float: none;
+}
+
+#mouseHole .pool ol .title {
+  color: white;
+}
+
+#mouseHole .pool ol .title h1 {
+  font-size: 12px;
+}
+
+#mouseHole .pool ol .title h2 {
+  font-size: 10px;
+}
+
+#mouseHole .pool ol .block .inside,
+#mouseHole .pool ol .block .actions {
+  display: none;
+}
+
+/* styling of doorway controls */
+#mousehole .control {
+  font-size: 11px;
+  list-style: none;
+  padding: 8px;
+  margin: 0px 15px;
+  border: solid 1px #e9a;
+  background-color: #fff8f2;
+}
+
+#mousehole .control .doorway {
+  background: url(/static/icons/door.png) no-repeat;
+}
+
+#mousehole .control .apps {
+  background: url(/static/icons/ruby.png) no-repeat;
+}
+
+#mousehole .control .data {
+  background: url(/static/icons/database.png) no-repeat;
+}
+
+#mousehole .control .help {
+  background: url(/static/icons/lightbulb.png) no-repeat top right;
+  float: right;
+  margin-top: -2px;
+}
+
+#mousehole a {
+  color: #c30;
+  padding: 2px;
+}
+
+#mousehole .control a {
+  text-decoration: none;
+  padding: 0px 6px 0px 20px;
+  font-weight: bold;
+}
+
+#mousehole a:hover {
+  color: #6a3;
+}
+
+#mousehole .help a {
+  padding: 0px 20px 0px 6px;
+}
+
+#mousehole .control li {
+  display: inline;
+  margin: 2px;
+  padding: 2px;
+  /* border-right: solid 1px #ebc; */
+}
+
+#mousehole .control li input {
+  border: solid 1px black;
+}
+
+#mousehole .main {
+  padding: 10px 20px;
+}
+
+#mousehole ul.apps {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+#mousehole ul.apps li {
+  padding: 0 10px 0 20px;
+  margin: 6px 0px;
+  width: 44%;
+  float: left;
+}
+
+#mousehole .apps h2 {
+  float: left;
+  font: normal 19px verdana, arial, sans-serif;
+  text-align: left;
+  padding: 2px;
+}
+
+#mousehole .app-broken {
+  background: url(../icons/broken.png) 0px 4px no-repeat;
+}
+
+#mousehole .app-ruby {
+  background: url(../icons/ruby.png) 0px 4px no-repeat;
+}
+
+#mousehole .app-ruby_gear {
+  background: url(../icons/ruby_gear.png) 0px 4px no-repeat;
+}
+
+#mousehole .apps h2 a {
+  color: #08E;
+}
+
+#mousehole .apps h2.broken a {
+  color: black;
+  background-color: #eee;
+}
+
+#mousehole .apps h2 a:hover {
+  background-color: #F30;
+  color: white;
+  text-decoration: none;
+}
+
+#mousehole .apps .mount {
+  float: left;
+  font-size: 9px;
+  padding: 0 4px 4px 4px;
+  margin-left: 4px;
+  border-left: solid 1px #ccc;
+}
+
+#mousehole .apps .mount a {
+  font-size: 14px;
+}
+
+#mousehole .apps .description {
+  clear: both;
+  font-size: 11px;
+  color: #999;
+  padding: 2px;
+}
+
+#mousehole ol.doorblocks {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+#mousehole #footer {
+  clear: both;
+  color: #555;
+  font-size: 10px;
+  margin: 6px 6px;
+  text-align: center;
+  padding-top: 6px;
+  border-top: solid 1px #eec;
+}
+
+#mousehole #footer img {
+  margin: -6px 2px -6px 9px;
+}
+
+/* app editor */
+#mousehole .config {
+  width: 44%;
+  float: left;
+}
+
+#mousehole div.rules {
+  width: 54%;
+  float: left;
+  margin: 4px;
+}
+
+#mousehole div.rules h2 {
+  font-size: 14px;
+  color: green;
+  font-weight: bold;
+}
+
+#mousehole div.rules select {
+  width: 100%;
+}
+
+#mousehole div.blocks {
+  clear: both;
+  font-size: .6em;
+  background-color: #eee;
+  color: #666;
+  padding: 4px;
+}
+
+#mousehole #app .submits {
+  text-align: center;
+}
+
+#mousehole #app .submits input {
+  margin: 3px;
+}
+
+#mousehole #app .description {
+  color: #666;
+  clear: both;
+  font-size: 14px;
+  padding: 6px;
+}
+
+#mousehole #app .config ul {
+  list-style: none;
+}
+
+#mousehole #app .exception {
+  background-color: #f5f5f5;
+  color: #777;
+  padding: 9px;
+}
+
+#mousehole #app .exception h2 {
+  text-align: left;
+  color: #555;
+}
+
+#mousehole #app .exception h3 {
+  font-size: 14px;
+  text-align: left;
+}
+
+#mousehole #app .exception ul {
+  font-size: 12px;
+  list-style: none;
+  margin: 0;
+}
